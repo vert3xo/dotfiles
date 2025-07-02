@@ -1,4 +1,4 @@
-export PATH=$PATH:/home/vert3xo/.local/bin
+export PATH=$PATH:$HOME/.local/bin:$HOME/AppImages
 
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
