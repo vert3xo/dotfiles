@@ -1,0 +1,87 @@
+version = 3
+final_space = true
+
+[upgrade]
+  source = 'cdn'
+  interval = '168h'
+  auto = false
+  notice = false
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+
+  [[blocks.segments]]
+    leading_diamond = ''
+    trailing_diamond = ''
+    template = ' {{ .UserName }}@{{ .HostName }} '
+    foreground = '#ff0000'
+    background = '#333333'
+    type = 'session'
+    style = 'diamond'
+
+  [[blocks.segments]]
+    template = '  {{ .Icon }}{{ if ne .Status "stopped" }}{{ .Artist }} - {{ .Track }}{{ end }} '
+    foreground = '#434343'
+    powerline_symbol = ''
+    background = '#1BD760'
+    type = 'spotify'
+    style = 'powerline'
+
+  [[blocks.segments]]
+    template = '  {{ .Path }} '
+    foreground = '#000000'
+    powerline_symbol = ''
+    background = '#ff0000'
+    type = 'path'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      style = 'folder'
+
+  [[blocks.segments]]
+    template = ' {{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }} '
+    foreground = '#193549'
+    powerline_symbol = ''
+    background = '#fffb38'
+    type = 'git'
+    style = 'powerline'
+
+    [blocks.segments.properties]
+      fetch_stash_count = true
+      fetch_upstream_icon = true
+
+  [[blocks.segments]]
+    template = '  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} '
+    foreground = '#ffffff'
+    powerline_symbol = ''
+    background = '#6CA35E'
+    type = 'node'
+    style = 'powerline'
+
+  # [[blocks.segments]]
+  #   template = '  {{ .Name }} '
+  #   foreground = '#ffffff'
+  #   powerline_symbol = ''
+  #   background = '#203248'
+  #   type = 'shell'
+  #   style = 'powerline'
+
+  [[blocks.segments]]
+    template = '  '
+    foreground = '#ffffff'
+    powerline_symbol = ''
+    background = '#ffff66'
+    type = 'root'
+    style = 'powerline'
+
+  # [[blocks.segments]]
+  #   template = '<transparent></>  <background,transparent></>'
+  #   foreground = '#ffffff'
+  #   background = '#2e9599'
+  #   type = 'status'
+  #   style = 'plain'
+  #   background_templates = ['{{ if gt .Code 0 }}#f1184c{{ end }}']
+
+  #   [blocks.segments.properties]
+  #     always_enabled = true
