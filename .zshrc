@@ -54,6 +54,9 @@ alias cd='z'
 #eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
+# mise
+eval "$(/home/vert3xo/.local/bin/mise activate zsh)"
+
 # pnpm
 export PNPM_HOME="/home/vert3xo/.local/share/pnpm"
 case ":$PATH:" in
