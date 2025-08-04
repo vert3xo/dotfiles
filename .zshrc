@@ -49,6 +49,7 @@ alias ls='ls --color'
 alias vi='nvim'
 alias vim='nvim'
 alias cd='z'
+alias kitty-update='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
 # Shell integrations
 #eval "$(fzf --zsh)"
