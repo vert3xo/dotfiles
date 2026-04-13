@@ -64,35 +64,8 @@
     </child>
 
     <child>
-      <object class="GtkMenuItem" id="action-3">
-        <property name="label">Refresh rate</property>
-        <child type="submenu">
-            <object class="GtkMenu">
-                <child>
-                    <object class="GtkMenuItem" id="action-3-1">
-                        <property name="label">60Hz</property>
-                    </object>
-                </child>
-
-                <child>
-                    <object class="GtkMenuItem" id="action-3-2">
-                        <property name="label">90Hz</property>
-                    </object>
-                </child>
-
-                <child>
-                    <object class="GtkMenuItem" id="action-3-3">
-                        <property name="label">144Hz</property>
-                    </object>
-                </child>
-            </object>
-        </child>
-      </object>
-    </child>
-
-    <child>
       <object class="GtkMenuItem" id="action-4">
-        <property name="label">Inhibit</property>
+        <property name="label">Power</property>
         <child type="submenu">
             <object class="GtkMenu">
                 <child>
@@ -103,7 +76,7 @@
 
                 <child>
                     <object class="GtkMenuItem" id="action-4-2">
-                        <property name="label">Lid</property>
+                        <property name="label">Reboot</property>
                     </object>
                 </child>
             </object>
