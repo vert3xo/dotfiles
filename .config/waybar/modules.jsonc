@@ -156,10 +156,10 @@
     },
 
     "clock": {
-        "timezone": "America/Argentina/Buenos_Aires",
         "tooltip-format": "<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%H:%M %d %B %Y}",
         "on-click-right": "hyprctl dispatch exec 'alacritty --class=peaclock -e peaclock'",
+	"locale": "en_IE.UTF-8",
         "calendar": {
             "mode": "year",
             "weeks-pos": "right",
