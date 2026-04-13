@@ -21,7 +21,7 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # Oh My Posh
-eval "$(oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/catppuccin_mocha.toml)"
+eval "$($HOME/.local/bin/oh-my-posh init zsh --config $XDG_CONFIG_HOME/ohmyposh/catppuccin_mocha.toml)"
 
 # Keybindings
 bindkey '^p' history-search-backward
@@ -55,13 +55,13 @@ alias kitty-update='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /d
 #eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
 
-# mise
-eval "$(/home/vert3xo/.local/bin/mise activate zsh)"
-
 # pnpm
-export PNPM_HOME="/home/vert3xo/.local/share/pnpm"
+export PNPM_HOME="$HOME/.local/share/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
+# mise
+eval "$($HOME/.local/bin/mise activate zsh)"
