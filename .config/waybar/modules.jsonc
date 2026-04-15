@@ -119,10 +119,9 @@
         "menu": "on-click-right",
         "menu-file": "~/.config/waybar/context/network.xml",
         "menu-actions": {
-  		"action-1": "nmcli radio wifi off",
-  		"action-2": "nmcli radio wifi on",
-            	"action-3": "hyprctl dispatch exec '[float] kitty -e nmtui'",
-            	"action-4": "hyprctl dispatch exec nm-connection-editor"
+  		"action-1": "connmanctl enable wifi",
+  		"action-2": "connmanctl disable wifi",
+            	"action-3": "hyprctl dispatch exec connman-gtk"
   	}
     },
 
@@ -206,24 +205,14 @@
         "menu": "on-click-right",
         "menu-file": "~/.config/waybar/context/ctlcenter.xml",
         "menu-actions": {
-            "action-1-1": "hyprctl dispatch exec '[float] alacritty -e htop'",
-            "action-1-2": "hyprctl dispatch exec '[float] alacritty -e nvtop'",
-            "action-1-3": "hyprctl dispatch exec '[float] alacritty -e pkexec powertop'",
+            "action-1-1": "hyprctl dispatch exec '[float] kitty -e htop'",
+            "action-1-2": "hyprctl dispatch exec '[float] kitty -e nvtop'",
+            "action-1-3": "hyprctl dispatch exec '[float] kitty -e pkexec powertop'",
             "action-1-4": "hyprctl dispatch exec '[float] missioncenter'",
 
-            "action-2-1": "hyprctl dispatch exec nwg-look",
-            "action-2-2": "hyprctl dispatch exec qt6ct",
-            "action-2-3": "hyprctl dispatch exec kvantummanager",
+            "action-4-1": "hyprshutdown -t 'Shutting down...' --post-cmd 'loginctl poweroff'",
+            "action-4-2": "hyprshutdown -t 'Restarting...' --post-cmd 'loginctl reboot'",
 
-
-            "action-3-1": "hyprctl keyword monitor 'eDP-1,1920x1080@60, auto,1'",
-	    "action-3-2": "hyprctl keyword monitor 'eDP-1,1920x1080@90, auto,1'",
-	    "action-3-3": "hyprctl keyword monitor 'eDP-1,1920x1080@144,auto,1'",
-
-            "action-4-1": "hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'",
-            "action-4-2": "hyprshutdown -t 'Restarting...' --post-cmd 'reboot'",
-
-            "action-5": "~/.local/bin/powersafe",
             "action-6": "hyprctl reload"
   	}
     },
