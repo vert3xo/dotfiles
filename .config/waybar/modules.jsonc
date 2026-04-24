@@ -194,7 +194,7 @@
     },
 
     "custom/start": {
-        "format": "",
+        "format": "",
         "on-click": "~/.config/rofi/bin/drun &"
     },
 
