@@ -210,8 +210,8 @@
             "action-1-3": "hyprctl dispatch exec '[float] kitty -e pkexec powertop'",
             "action-1-4": "hyprctl dispatch exec '[float] missioncenter'",
 
-            "action-4-1": "hyprshutdown -t 'Shutting down...' --post-cmd 'loginctl poweroff'",
-            "action-4-2": "hyprshutdown -t 'Restarting...' --post-cmd 'loginctl reboot'",
+            "action-4-1": "loginctl poweroff",
+            "action-4-2": "loginctl reboot",
 
             "action-6": "hyprctl reload"
   	}
