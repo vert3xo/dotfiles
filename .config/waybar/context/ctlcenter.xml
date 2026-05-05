@@ -50,11 +50,5 @@
         </child>
 
         <child><object class="GtkSeparatorMenuItem" id="separator"/></child>
-
-        <child>
-            <object class="GtkMenuItem" id="action-6">
-                <property name="label"> Reload config</property>
-            </object>
-        </child>
     </object>
 </interface>
