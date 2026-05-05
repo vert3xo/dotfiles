@@ -24,15 +24,15 @@ final_space = true
     type = 'os'
     style = 'plain'
 
-  [[blocks.segments]]
-    template = '{{ .UserName }}@{{ .HostName }} '
-    foreground = 'p:blue'
-    type = 'session'
-    style = 'plain'
+#  [[blocks.segments]]
+#    template = '{{ .UserName }}@{{ .HostName }} '
+#    foreground = 'p:blue'
+#    type = 'session'
+#    style = 'plain'
 
   [[blocks.segments]]
     template = '{{ .Path }} '
-    foreground = 'p:pink'
+    foreground = 'p:blue'
     type = 'path'
     style = 'plain'
 
