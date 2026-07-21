@@ -119,9 +119,9 @@
         "menu": "on-click-right",
         "menu-file": "~/.config/waybar/context/network.xml",
         "menu-actions": {
-  		"action-1": "connmanctl enable wifi",
-  		"action-2": "connmanctl disable wifi",
-            	"action-3": "niri msg action spawn -- connman-gtk"
+  		"action-1": "nmcli radio wifi on",
+  		"action-2": "nmcli radio wifi off",
+            	"action-3": "niri msg action spawn -- nm-connection-editor"
   	}
     },
 
