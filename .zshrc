@@ -1,3 +1,5 @@
+source $HOME/.config/user-dirs.dirs
+
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 [ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
 [ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
@@ -49,7 +51,6 @@ alias ls='ls --color'
 alias vi='nvim'
 alias vim='nvim'
 alias cd='z'
-alias kitty-update='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin'
 
 # Shell integrations
 #eval "$(fzf --zsh)"
